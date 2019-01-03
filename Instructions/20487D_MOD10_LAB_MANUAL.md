@@ -8,7 +8,7 @@
 
 1. In the Microsoft Azure portal, create an Azure web app.
 2. In Microsoft Visual Studio Code, Open the *[Repository Root]***\AllFiles\Mod10\Labfiles\Lab1\Starter**.
-3. Create a new folder and name it **Middleware**. In this folder, create a new file, and name it **ExceptionHandlingMiddleware.cs**.
+3. Create a new folder and name it **Middleware**. In this folder, create a new file, and name it **MachineNameMiddleware.cs**.
 4. In the **MachineNameMiddleware.cs** file, add a **RequestDelegate** instance, and initiate it as the constructor.
 5. To add the **X-BlueYonder-Server** header with **MachineName** as the value, add the **Invoke** method.
 6. In **IApplicationBuilder**, add an extension method.
@@ -16,8 +16,8 @@
 
 #### Task 2: Deploy the application to an Azure web app
 
-1. Publish the **blueyonder***{YourInitials}* service.
-2. Open the Azure portal, and then click the **blueyonder***{YourInitials}* service.
+1. Publish the **blueyonder**{YourInitials} service.
+2. Open the Azure portal, and then click the **blueyonder**{YourInitials} service.
 3. In the **Settings** section, click **Scale up (App Service plan)**.
 4. On the **Dev/Test** tab, in the **Recommended pricing tiers** box, enter **B1**.
 
@@ -32,7 +32,7 @@
 
 1. Open Microsoft Edge, and then browse to the following URL:
    ```url
-   https://blueyonder*{YourInitials}*.azurewebsites.net/api/destinations
+   https://blueyonder{YourInitials}.azurewebsites.net/api/destinations
    ```
 2. Verify that the response has a list of destinations in JSON.
 
@@ -41,12 +41,12 @@
 1. In Microsoft Edge, open **Developer Tools**, and then click the **Network** tab.
 2. Browse to the following URL:
    ```url
-   https://blueyonder*{YourInitials}*.azurewebsites.net/api/destinations
+   https://blueyonder{YourInitials}.azurewebsites.net/api/destinations
    ```
 3. Verify that the response has a list of destinations in JSON.
 4. In the **Network** tab, locate the following URL:
    ```url
-    https://blueyonder*{YourInitials}*.azurewebsites.net/api/destinations
+    https://blueyonder{YourInitials}.azurewebsites.net/api/destinations
    ```
  5. In the **Response Headers** section, locate the **X-BlueYonder-Server**, and then verify that the **Status** is **200**.
 
@@ -54,7 +54,7 @@
 
 #### Task 1: Update the application to not use affinity
 
-1. In the Azure portal, click the **blueyonder***{YourInitials}* web app.
+1. In the Azure portal, click the **blueyonder**{YourInitials} web app.
 2. Click **Application settings**. In the **Settings** section, click **General settings**.
 3. In **General settings**, switch **ARR Affinity** to **Off**.
 
@@ -65,7 +65,7 @@
 3. In the **Network** tab,  view **X-BlueYonder-Server**.
    > **Note**: Now there are two server instances in **X-BlueYonder-Server**, because of which you can get two different values for **machine name**.
 
-# Lab 2: Load Balancing with Azure Traffic Manager
+# Lab: Load Balancing with Azure Traffic Manager
 
 ### Exercise 1: Deploy an Azure Web App to Multiple Regions
 
@@ -91,7 +91,7 @@
 
 #### Task 1: Create an Azure Traffic Manager profile in the Azure portal
 
-Create a Traffic Manager profile with the **Priority** routing method.
+1. Create a Traffic Manager profile with the **Priority** routing method.
 
 #### Task 2: Configure the profile to point to the two Azure web apps
 

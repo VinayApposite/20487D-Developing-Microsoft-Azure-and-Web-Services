@@ -118,7 +118,7 @@
     ```cs
     using Serilog;
     ```
-11. To use **Serilog** and write the logs to the console, click **Program.cs**, and then after **UseStartup<Startup>()**, paste the following code in the **CreateWebHostBuilder** method:
+11. To use **Serilog** and write the logs to the console, click **Program.cs**, and then after **UseStartup\<Startup\>()**, paste the following code in the **CreateWebHostBuilder** method:
     ```cs
     .UseSerilog((hostingContext, loggerConfiguration) => loggerConfiguration
 	    .ReadFrom.Configuration(hostingContext.Configuration)
@@ -263,7 +263,6 @@
 
 # Lesson 3: Application Insights
 
-
 ### Demonstration: Integrating and viewing Application Insights
 
 ### Preparation Steps
@@ -271,18 +270,18 @@
 1. Open Windows PowerShell as Administrator.
 2. In the **User Account Control** modal, click **Yes**.
 3. Run the following command: **Install-Module azurerm -AllowClobber -MinimumVersion 5.4.1**.
-   >**Note**: If prompted for trust this repository , Type A and then press Enter.
+   >**Note**: If prompted for trust this repository, Type **A** and then press **Enter**.
 4. Browse to *[repository root]***\AllFiles\Mod08\DemoFiles\ApplicationInsights\Setup**.
 5. Run the following command:
-   >**Note**: If prompted for Run only scripts that you trusted, type R and then press Enter.
     ```batch
      .\createAzureServices.ps1
     ```
+    >**Note**: If prompted for Run only scripts that you trusted, type **R** and then press **Enter**.
 
 #### Demonstration Steps
 
 1. Open the Microsoft Azure portal.
-2. Click **All resources**, and  then click **blueyondermod08demo5***{YourInitials}*.
+2. Click **All resources**, and  then click **blueyondermod08demo5**{YourInitials}.
 3. In the left pane, in the **SETTINGS** section, click **Application Insights** .
 4. Click **Turn on site Extension**, and then add the following information:
     - Select **Create new resource**.
@@ -417,7 +416,7 @@
     >**Note:** If prompted for trust this repository type A and then press Enter.
 18. In PowerShell, to change directory, type the following command, and then press Enter:
     ```bash
-      cd [Repository Root]\AllFiles\Mod08\DemoFiles\Mod8Demo6\Setup
+      cd [Repository Root]\AllFiles\Mod08\DemoFiles\Mod8Demo6\Starter\Setup
     ```
 19. Run the following command:
     ```bash
@@ -435,11 +434,11 @@
 21. Open Microsoft Edge.
 22. Navigate to **https://portal.azure.com** and login with your credentials.
 23. In the left menu panel, click **App Services**.
-24. Click **blueyonderMod8Demo6***{yourinitials}*.
+24. Click **blueyonderMod8Demo6**{yourinitials}.
 25. In the left menu panel, under **Settings**, click **Application Insights**.
 26. Click **Turn on site extension**.
     - Select **Create new resource**.
-    - Select **blueyonderMod8Demo6***{yourinitials}*.
+    - Select **blueyonderMod8Demo6**{yourinitials}.
 27. Under **Instrument your application**, select **.NET Core**.
 28. Click **Apply**, and then click **Yes**.
 29. Wait until all changes are saved.
@@ -465,7 +464,7 @@
 38. To refresh the page, press F5 a couple of times.
 39. Switch to Azure portal.
 40. On the left panel click **All resources**.
-41. Click the **blueyonderMod8Demo6***{YourInitial}* Application Insights.
+41. Click the **blueyonderMod8Demo6**{YourInitial} Application Insights.
 42. Under **Investigate**, click **Performance**.
 43. Click **Dependencies** and then locate the **HTTP: GET httpbin.org/get** request.
 44. Close all open windows.

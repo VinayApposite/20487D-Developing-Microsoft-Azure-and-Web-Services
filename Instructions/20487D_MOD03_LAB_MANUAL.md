@@ -20,7 +20,7 @@ After completing this lab, you will be able to:
  
 #### Task 1: Add a controller class
 
-1. Open Command Prompt, and then browse to **Repository Root]\Allfiles\Mod03\LabFiles\Lab1\Starter**.
+1. Open Command Prompt, and then browse to **[Repository Root]\Allfiles\Mod03\LabFiles\Lab1\Starter**.
 2. Open the project in Microsoft Visual Studio Code.
 3. In the **BlueYonder.Hotels.Service** project, add a new controller called **HotelBookingController**.
 4. In **HotelBookingController**, add the **HotelBookingRepository** field, and then initialize the field by using the constructor.
@@ -35,18 +35,26 @@ After completing this lab, you will be able to:
 
 #### Task 1: Use a browser to access the GET action
 
-1. Run the **BlueYonder.Hotels.Service** service.
-2. Open a browser, and then browse to the **GET** action with **id 1**.
-   
+1. Run the **BlueYonder.Hotels.Service** project.
+2. Open a browser,  and navigate to the following URL:
+   ```url
+    http://localhost:5000/api/HotelBooking/1
+   ```
+   >**Note**: If there is an error in the Console after running the application, run the following command: **dotnet dev-certs https --trust**.
+3. Close all open windows.
    >**Result:** You should see the **Booking** reservation with **Booking Id: 1**.
 
 ### Exercise 3: Create a Client
 
-#### Task 1: Create a console project and add the reference to System.Net.Http
+#### Task 1: Create a console project and add a reference to System.Net.Http
 
-1. Create a new console application called **BlueYonder.Hotels.Client**.
-2. Add the **BlueYonder.Hotels.Client** project to the solution.
-3. In the **BlueYonder.Hotels.Client** project, install the **Microsoft AspNet WebApi Client** package.
+1. To change the directory to the Starter project, run the following command:
+   ```bash
+    cd [Repository Root]\Allfiles\Mod03\LabFiles\Lab1\Starter
+   ```
+2. Create a new console application called **BlueYonder.Hotels.Client**.
+3. Add the **BlueYonder.Hotels.Client** project to the solution.
+4. In the **BlueYonder.Hotels.Client** project, install the **Microsoft AspNet WebApi Client** package.
 
 #### Task 2: Use HttpClient to Call the GET and PUT Actions of the Controller
 
@@ -63,6 +71,7 @@ After completing this lab, you will be able to:
 11. Run the **BlueYonder.Hotels.Service** project.
 12. Run the **BlueYonder.Hotels.Client** project.
 13. At the command prompt, verify that the bookings from the **GET** and the **PUT** requests appear. 
+14. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

@@ -22,11 +22,11 @@ After completing this lab, you will be able to:
 #### Task 1: Store publicly accessible files in Blob Storage
 
 1. Open the Azure portal.
-2. Create a storage account, and name it **blueyonder***{YourInitials}*.
+2. Create a storage account, and name it **blueyonder**{YourInitials}.
 3. Create a new blob container, name it **aircraft-images**, and then set its public access level as **Container (anonymous read access for containers and blobs)**.
 
 #### Task 2: Upload a file to the Blob Storage container from the Azure CLI
-To upload the **france.jpg** file to the **aircraft-images** blob container, at the Azure CLI, enter the following path:
+1. To upload the **france.jpg** file to the **aircraft-images** blob container, at the Azure CLI, enter the following path:
    ```url
    [Repository Root]\AllFiles\Mod07\Labfiles\Lab1\Assets\france.jpg
    ```
@@ -58,7 +58,7 @@ To upload the **france.jpg** file to the **aircraft-images** blob container, at 
 
 #### Task 1: Create a Blob Storage container
 
-Create a new container, name it **manifests**, and assign it **Private (no anonymous access)** accessibility.
+1. Create a new container, name it **manifests**, and assign it **Private (no anonymous access)** accessibility.
 
 #### Task 2: Generate a passenger manifest and store it in the container
 
@@ -94,7 +94,7 @@ Create a new container, name it **manifests**, and assign it **Private (no anony
 
 1. Open the Azure portal.
 2. To create an Azure Cosmos DB graph database, in **Account Name** box type **blueyonder-destinations{YourInitials}**, and then, in **API**, select **Gremlin (graph)**. 
-3. Click **blueyonder-destinations***{YourInitials}*, and then type **Azure Cosmos DB account**.
+3. Click **blueyonder-destinations**{YourInitials}, and then type **Azure Cosmos DB account**.
 4. To add a graph, in **Database id**, select **Create new**, type **blueyonder**, and then, in **Graph Id**, type **traveler**.
 
 #### Task 2: Run a script to import itinerary data (flights and destinations) to the database
@@ -112,6 +112,7 @@ Create a new container, name it **manifests**, and assign it **Private (no anony
 
 #### Task 1: Add a query to return related attractions from the itinerary service
 
+1. In **Settings** section , click **Keys** and then copy the **PRIMARY KEY** value.
 1. Open the **Starter** project.
 2. Install the **Gremlin.Net** package.
 3. In the **appsettings.json** file, update **HostName** and **Authkey**.
@@ -152,7 +153,7 @@ Create a new container, name it **manifests**, and assign it **Private (no anony
 ### Preparation Steps
 
 1. Open PowerShell as Administrator and run the following command: **Install-Module azurerm -AllowClobber -MinimumVersion 5.4.1**.
-2. Browse to *[repository root]***\Mod07\Labfiles\Lab3\Setup**.
+2. Browse to [repository root]**\Mod07\Labfiles\Lab3\Setup**.
 3. Run the following command:
    ```batch
     .\createAzureServices.ps1
@@ -165,17 +166,17 @@ Create a new container, name it **manifests**, and assign it **Private (no anony
 #### Task 1: Create the Azure Redis Cache service
 
 1. Go to the Azure portal.
-2. To create an Azure Redis Cache, in **DNS name**, type **blueyonder-cache***{YourInitials}*.
+2. To create an Azure Redis Cache, in **DNS name**, type **blueyonder-cache**{YourInitials}.
 
 #### Task 2: Locate the service key
 
-From the new Azure Redis Cache, copy the primary connection string.
+1. From the new Azure Redis Cache, copy the primary connection string.
 
 ### Exercise 2: Access the Cache Service from Code
 
 #### Task 1: Install the StackExchange.Redis NuGet package
 
-In the **Starter** folder, to the **BlueYonder.Flights.Service** project, add the **StackExchange.Redis** package.
+1. In the **Starter** folder, to the **BlueYonder.Flights.Service** project, add the **StackExchange.Redis** package.
 
 #### Task 2: Configure the cache credentials
 
@@ -195,7 +196,7 @@ In the **Starter** folder, to the **BlueYonder.Flights.Service** project, add th
 #### Task 4: Configure the web application to disable instance affinity
 
 1. Switch to the Azure portal.
-2. In **App Services**, click **blueyondermod07lab03***{YourInitials}*.
+2. In **App Services**, click **blueyondermod07lab03**{YourInitials}.
 3. In the **SETTING** section, click **Scale up (App Service plan)**.
 4. In the **Dev/Test** tab, select **B1**.
 5. In the **SETTING** section, click **Scale out (App Service plan)**.
@@ -205,7 +206,7 @@ In the **Starter** folder, to the **BlueYonder.Flights.Service** project, add th
 
 #### Task 5: Deploy the application to a scaled web app
 
-Publish the service.
+1. Publish the service.
    ```cs
    dotnet publish /p:PublishProfile=Azure /p:Configuration=Release
    ```
@@ -222,7 +223,7 @@ Publish the service.
 
 #### Task 2: Verify you are accessing multiple instances
 
-Refresh the page a couple of times and verify that the **X-BlueYonder-Server** header has changed. 
+1. Refresh the page a couple of times and verify that the **X-BlueYonder-Server** header has changed. 
 
 #### Task 3: Verify you are getting the cached data
 
